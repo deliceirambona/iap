@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equation</title>
+</head>
+<body>
+    <form action="">
+        <input type="number" id="number1" placeholder="Enter number of a" required><br><br>
+        <input type="number" id="number2" placeholder="Enter number of b" required><br><br>
+        <input type="number" id="number3" placeholder="Enter number of c" required><br><br>
+
+        <p id="x1"></p>
+        <p id="x2"></p>
+        <button type="button" onclick="equa()">Solve Equation</button>
+    </form>
+
+    <script>
+        function equa(){
+            var a = Number(document.getElementById('number1').value);
+            var b = Number(document.getElementById('number2').value);
+            var c = Number(document.getElementById('number3').value);
+
+            if(a !== 0){
+            const delta = b**2 - 4*(a*c);
+            const root = Math.sqrt(delta);
+
+            var x1 =  (-b + root) / (2*a);
+            var x2 =  (-b - root) / (2*a);
+
+            document.getElementById('x1').innerText = "The value of x1 is: " + x1;
+            document.getElementById('x2').innerText = "The value of x2 is: " + x2;
+            }else{
+                alert("The value of a cannot be zero");
+            }
+        }
+    </script>
+</body>
+</html>
