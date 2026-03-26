@@ -7,16 +7,18 @@
 </head>
 <body>
     <form action="">
-        <input type="text" name="" id="number1" placeholder="Enter Radius" required>
+        <input type="text" name="" id="number1" placeholder="Enter Base" required>
+        <input type="text" name="" id="number2" placeholder="Enter Height" required>
         <p id="result"></p>
         <button type="button" onclick="area()">Calculate Area</button>
     </form>
     <script>
         function area(){
             var a =  Number(document.getElementById('number1').value);
-            var pp = Math.PI;
-            var area = pp * (a**2);
-            document.getElementById('result').innerText = "The area of the circle is: " + area;
+            var b =  Number(document.getElementById('number2').value);
+
+            var area = (a * b) / 2;
+            document.getElementById('result').innerText = "The area of the triangle is: " + area;
         }
     </script>
 

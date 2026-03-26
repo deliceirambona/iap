@@ -62,3 +62,20 @@ nav .search button{
 nav .search input ::placeholder{
     color:rgb(241, 241, 241);
 }
+main #home img{
+    
+    width:80%; ;
+    
+}
+main #home .description{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    background: gray;
+    padding: 2rem;
+    opacity: 60%;
+}
+    

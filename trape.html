@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        
+        <input type="number" id="base1" placeholder="Enter Base 1"><br><br>
+        <input type="number" id="base2" placeholder="Enter Base 2"><br><br>
+        <input type="number" id="height" placeholder="Enter Height"><br><br>
+        <p id="result"></p>
+        <button type="button" onclick="area()">Calculate Area</button>
+
+        <script>
+            function area(){
+                var base1 = Number(document.getElementById('base1').value);
+                var base2 = Number(document.getElementById('base2').value);
+                var height = Number(document.getElementById('height').value);
+                var area = 0.5 * (base1 + base2) * height;
+                document.getElementById('result').innerText = "Area: " + area;
+            }
+        </script>
+    </form>
+</body>
+</html>
